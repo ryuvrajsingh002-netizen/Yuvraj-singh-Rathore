@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", "Syne", sans-serif;
+  --font-editorial: "Syne", sans-serif;
+  --font-serif-title: "Cinzel", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  --color-dark-obsidian: #060607;
+  --color-dark-surface: #0e0e11;
+  --color-dark-card: #121216;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+
+  --color-cream-50: #FFFDF9;
+  --color-cream-100: #F7F3EB;
+  --color-cream-200: #EDE7DC;
+  --color-cream-300: #D9D2C5;
+  --color-cream-400: #A89F91;
+
+  --color-accent-dark: #3a080d;
+  --color-accent-burgundy: #6f0e1a;
+  --color-accent-crimson: #9b1424;
+  --color-accent-red: #c9182b;
+  --color-accent-glow: #e62338;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #060607;
+    color: #EDE7DC;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a0b12;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6f0e1a;
+  }
+}
+
+/* Atmospheric Glow Backgrounds */
+.burgundy-glow {
+  background: radial-gradient(circle at center, rgba(140, 18, 32, 0.22) 0%, rgba(100, 10, 22, 0.08) 45%, transparent 75%);
+}
+
+.subtle-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.editorial-noise {
+  background-image: radial-gradient(rgba(237, 231, 220, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.luxury-card {
+  background: linear-gradient(180deg, rgba(22, 21, 26, 0.7) 0%, rgba(12, 12, 15, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: rgba(180, 25, 42, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(136, 18, 31, 0.15);
+}
